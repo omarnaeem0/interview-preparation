@@ -149,6 +149,10 @@
 
 ---
 
+## Event Loop
+
+---
+
 ## Asynchronous JavaScript – Callbacks, Promises, and Async/Await
 
 ### Synchronous vs Asynchronous
@@ -299,7 +303,7 @@
   console.log(calculateGST(15))
   ```
 * If a pure function calls a pure function, this isn’t a side effect, and the calling function is still considered pure.
-* The example given below is not a pure function as the output dependent on an external variable `tax`. So if the tax value is updated somehow, then we will get a different output though we pass the same productPrice as a parameter to the function.
+* The example given below is not a pure function as the output dependent on an external variable `tax`. So if the tax value is updated somehow, then we will get a different output even though we pass the same productPrice as a parameter to the function.
   ```javascript
   let tax = 20;
   function calculateGST(productPrice) {
