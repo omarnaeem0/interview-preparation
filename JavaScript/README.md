@@ -181,8 +181,34 @@
   });
   ```
 ### Promise
+  ```javascript
+  new Promise((resolve, reject) => {
+    fs.readFile(file, (err, data) => {
+      if (err) reject('I could not find that file 😢');
+      resolve(data);
+    });
+  });
+  ```
 
-### Promise.all
+### Promise.all()
+* The Promise.all() static method takes an iterable of promises as input and returns a single Promise.
+* This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed which means already fulfilled), with an array of the fulfillment values.
+* It rejects when any of the input's promises rejects, with this first rejection reason.
+  ```javascript
+  const res1Pro = superagent.get(
+    `https://dog.ceo/api/breed/${data}/images/random`
+  );
+  const res2Pro = superagent.get(
+    `https://dog.ceo/api/breed/${data}/images/random`
+  );
+  const res3Pro = superagent.get(
+    `https://dog.ceo/api/breed/${data}/images/random`
+  );
+  const all = await Promise.all([res1Pro, res2Pro, res3Pro]);
+  const imgs = all.map((el) => el.body.message);
+  console.log(imgs);
+  ```
+* when all of the promises are fulfilled, it returns an array of fulfillment values in the same order promises are passed.
 
 ### async/await
 
