@@ -1,6 +1,8 @@
 ## JavaScript
 
 * [Data Types](./JavaScript/docs/data_types.md)
+  - [Primitive Types](./JavaScript/docs/data_types.md#primitive-types) 
+  - [Non-primitive Types](./JavaScript/docs/data_types.md#non-primitive-types) 
 * [Pass by reference, Pass by value](./JavaScript/docs/pass_by_reference_by_value.md)
 * [var, let, and const variables](./JavaScript/docs/var_let_const.md)
 * [Spread operator, rest operator, and default parameter](./JavaScript/docs/spread_rest_defaultparams.md)
