@@ -310,3 +310,20 @@
 
 ### IIFE (Immediatly invoked function expression)
 * a function that runs the moment it is invoked or called in the JavaScript event loop.
+  ```javascript
+  (async () => {
+    try {
+      console.log('1: Will get dog pics!');
+      const x = await getDogPic();
+      console.log(x);
+      console.log('3: Done getting dog pics!');
+    } catch (err) {
+      console.log('ERROR 💥');
+    }
+  })();
+  ```
+
+### Currying
+* Currying in JavaScript transforms a function with multiple arguments into a nested series of functions, each taking a single argument.
+* It helps you avoid passing the same variable multiple times, and it helps you create a higher order function.
+* turn a function call `sum(1,2,3)` into `sum(1)(2)(3)`.
